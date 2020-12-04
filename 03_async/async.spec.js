@@ -16,12 +16,14 @@ describe('Ajax: echo', () => {
   });
 
   test('should catch error with promise', () => {
+    expect.assertions(1);
     return Ajax.echo().catch(err => {
       expect(err).toBeInstanceOf(Error);
     });
   });
 
   test('should catch async error', async () => {
+    expect.assertions(1);
     try {
       await Ajax.echo();
     } catch (err) {

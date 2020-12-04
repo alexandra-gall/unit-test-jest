@@ -8,11 +8,7 @@ beforeAll(() => {
 
 describe('Lodash compact', () => {
 
-  let array;
-
-  beforeEach(() => {
-    array = [false, 42, 0, '', true, null, 'Hello'];
-  });
+  const array = [false, 42, 0, '', true, null, 'Hello'];
 
   test('should be defined', () => {
     expect(_.compact).toBeDefined();
